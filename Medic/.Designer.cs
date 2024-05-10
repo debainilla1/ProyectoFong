@@ -35,6 +35,7 @@
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.patientCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.patientStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.actualizationPatientBindingSource)).BeginInit();
@@ -74,24 +75,37 @@
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
             this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
             this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // patientCodeDataGridViewTextBoxColumn
             // 
             this.patientCodeDataGridViewTextBoxColumn.DataPropertyName = "PatientCode";
             this.patientCodeDataGridViewTextBoxColumn.HeaderText = "PatientCode";
             this.patientCodeDataGridViewTextBoxColumn.Name = "patientCodeDataGridViewTextBoxColumn";
+            this.patientCodeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // patientStatusDataGridViewTextBoxColumn
             // 
             this.patientStatusDataGridViewTextBoxColumn.DataPropertyName = "PatientStatus";
             this.patientStatusDataGridViewTextBoxColumn.HeaderText = "PatientStatus";
             this.patientStatusDataGridViewTextBoxColumn.Name = "patientStatusDataGridViewTextBoxColumn";
+            this.patientStatusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Location = new System.Drawing.Point(434, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(318, 212);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -106,10 +120,11 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource actualizationPatientBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn patientCodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn patientStatusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource actualizationPatientBindingSource;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
 
