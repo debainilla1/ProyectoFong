@@ -77,6 +77,9 @@
     <Compile Include="PatientStatus.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ActualizationPatients.resx">
+      <DependentUpon>ActualizationPatients.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202405101607574_initial.resx">
       <DependentUpon>202405101607574_initial.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +93,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\ActualizationPatient.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
