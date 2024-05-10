@@ -58,6 +58,12 @@
   <ItemGroup>
     <Compile Include="ActualizationPatient.cs" />
     <Compile Include="AssignedMedic.cs" />
+    <Compile Include="AssignedMedics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssignedMedics.Designer.cs">
+      <DependentUpon>AssignedMedics.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataContext.cs" />
     <Compile Include="ActualizationPatients.cs">
       <SubType>Form</SubType>
@@ -80,6 +86,9 @@
     <EmbeddedResource Include="ActualizationPatients.resx">
       <DependentUpon>ActualizationPatients.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AssignedMedics.resx">
+      <DependentUpon>AssignedMedics.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202405101607574_initial.resx">
       <DependentUpon>202405101607574_initial.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,6 +103,11 @@
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ActualizationPatient.datasource" />
+    <None Include="Properties\DataSources\AssignedMedic.datasource" />
+    <None Include="Properties\DataSources\Medic.Migrations.Configuration.datasource" />
+    <None Include="Properties\DataSources\Medic.Migrations.initial.datasource" />
+    <None Include="Properties\DataSources\Medic.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\Medic.Properties.Settings.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
