@@ -59,11 +59,12 @@
     <Compile Include="ActualizationPatient.cs" />
     <Compile Include="AssignedMedic.cs" />
     <Compile Include="DataContext.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="ActualizationPatients.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include=".Designer.cs">
+      <DependentUpon>ActualizationPatients.cs</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="MedicStay.cs" />
     <Compile Include="Migrations\202405101607574_initial.cs" />
