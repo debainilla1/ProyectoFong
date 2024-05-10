@@ -65,5 +65,15 @@ namespace Medic
                     }
                 }
             }
+
+        private void bttAdd_Click(object sender, EventArgs e)
+        {
+            
+                grpCtrls.Enabled = true;
+                actualizationPatientBindingSource.Add(new ActualizationPatient());
+                actualizationPatientBindingSource.MoveLast();
+                txtPatientCode.Focus();
+            }
         }
+    }
     }

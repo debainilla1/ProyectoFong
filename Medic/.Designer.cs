@@ -33,11 +33,11 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.PatientCode = new System.Windows.Forms.Label();
+            this.PatientStatus = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtPatientStatus = new System.Windows.Forms.TextBox();
+            this.txtPatientCode = new System.Windows.Forms.TextBox();
             this.bttSearch = new System.Windows.Forms.Button();
             this.bttAdd = new System.Windows.Forms.Button();
             this.bttEdit = new System.Windows.Forms.Button();
@@ -81,11 +81,11 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.txtPatientCode);
+            this.groupBox2.Controls.Add(this.txtPatientStatus);
             this.groupBox2.Controls.Add(this.txtId);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.PatientStatus);
+            this.groupBox2.Controls.Add(this.PatientCode);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(434, 12);
             this.groupBox2.Name = "groupBox2";
@@ -103,24 +103,24 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ID";
             // 
-            // label2
+            // PatientCode
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 68);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.PatientCode.AutoSize = true;
+            this.PatientCode.Location = new System.Drawing.Point(16, 68);
+            this.PatientCode.Name = "PatientCode";
+            this.PatientCode.Size = new System.Drawing.Size(65, 13);
+            this.PatientCode.TabIndex = 1;
+            this.PatientCode.Text = "PatientCode";
+            this.PatientCode.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label3
+            // PatientStatus
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 103);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
+            this.PatientStatus.AutoSize = true;
+            this.PatientStatus.Location = new System.Drawing.Point(16, 103);
+            this.PatientStatus.Name = "PatientStatus";
+            this.PatientStatus.Size = new System.Drawing.Size(70, 13);
+            this.PatientStatus.TabIndex = 2;
+            this.PatientStatus.Text = "PatientStatus";
             // 
             // txtId
             // 
@@ -130,21 +130,21 @@
             this.txtId.Size = new System.Drawing.Size(100, 20);
             this.txtId.TabIndex = 5;
             // 
-            // textBox2
+            // txtPatientStatus
             // 
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.actualizationPatientBindingSource, "PatientStatus", true));
-            this.textBox2.Location = new System.Drawing.Point(78, 100);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 6;
+            this.txtPatientStatus.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.actualizationPatientBindingSource, "PatientStatus", true));
+            this.txtPatientStatus.Location = new System.Drawing.Point(78, 100);
+            this.txtPatientStatus.Name = "txtPatientStatus";
+            this.txtPatientStatus.Size = new System.Drawing.Size(100, 20);
+            this.txtPatientStatus.TabIndex = 6;
             // 
-            // textBox5
+            // txtPatientCode
             // 
-            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.actualizationPatientBindingSource, "PatientCode", true));
-            this.textBox5.Location = new System.Drawing.Point(78, 65);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 9;
+            this.txtPatientCode.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.actualizationPatientBindingSource, "PatientCode", true));
+            this.txtPatientCode.Location = new System.Drawing.Point(78, 65);
+            this.txtPatientCode.Name = "txtPatientCode";
+            this.txtPatientCode.Size = new System.Drawing.Size(100, 20);
+            this.txtPatientCode.TabIndex = 9;
             // 
             // bttSearch
             // 
@@ -164,6 +164,7 @@
             this.bttAdd.TabIndex = 3;
             this.bttAdd.Text = "Agregar";
             this.bttAdd.UseVisualStyleBackColor = true;
+            this.bttAdd.Click += new System.EventHandler(this.bttAdd_Click);
             // 
             // bttEdit
             // 
@@ -256,11 +257,11 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource actualizationPatientBindingSource;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label PatientStatus;
+        private System.Windows.Forms.Label PatientCode;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPatientCode;
+        private System.Windows.Forms.TextBox txtPatientStatus;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Button bttSearch;
         private System.Windows.Forms.Button bttAdd;
