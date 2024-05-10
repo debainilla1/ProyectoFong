@@ -29,12 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpCtrls = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.actualizationPatientBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patientCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patientStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,22 +44,26 @@
             this.bttDelete = new System.Windows.Forms.Button();
             this.bttCancel = new System.Windows.Forms.Button();
             this.bttSave = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.actualizationPatientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patientCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patientStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grpCtrls.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actualizationPatientBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.actualizationPatientBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // grpCtrls
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(379, 206);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.grpCtrls.Controls.Add(this.dataGridView1);
+            this.grpCtrls.Location = new System.Drawing.Point(21, 18);
+            this.grpCtrls.Name = "grpCtrls";
+            this.grpCtrls.Size = new System.Drawing.Size(370, 206);
+            this.grpCtrls.TabIndex = 0;
+            this.grpCtrls.TabStop = false;
+            this.grpCtrls.Text = "groupBox1";
+            this.grpCtrls.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // dataGridView1
             // 
@@ -74,35 +74,10 @@
             this.patientCodeDataGridViewTextBoxColumn,
             this.patientStatusDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.actualizationPatientBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 19);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 29);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(379, 181);
+            this.dataGridView1.Size = new System.Drawing.Size(333, 111);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // actualizationPatientBindingSource
-            // 
-            this.actualizationPatientBindingSource.DataSource = typeof(Medic.ActualizationPatient);
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // patientCodeDataGridViewTextBoxColumn
-            // 
-            this.patientCodeDataGridViewTextBoxColumn.DataPropertyName = "PatientCode";
-            this.patientCodeDataGridViewTextBoxColumn.HeaderText = "PatientCode";
-            this.patientCodeDataGridViewTextBoxColumn.Name = "patientCodeDataGridViewTextBoxColumn";
-            this.patientCodeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // patientStatusDataGridViewTextBoxColumn
-            // 
-            this.patientStatusDataGridViewTextBoxColumn.DataPropertyName = "PatientStatus";
-            this.patientStatusDataGridViewTextBoxColumn.HeaderText = "PatientStatus";
-            this.patientStatusDataGridViewTextBoxColumn.Name = "patientStatusDataGridViewTextBoxColumn";
-            this.patientStatusDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // groupBox2
             // 
@@ -225,6 +200,30 @@
             this.bttSave.TabIndex = 7;
             this.bttSave.Text = "Guardar";
             this.bttSave.UseVisualStyleBackColor = true;
+            this.bttSave.Click += new System.EventHandler(this.bttSave_Click);
+            // 
+            // actualizationPatientBindingSource
+            // 
+            this.actualizationPatientBindingSource.DataSource = typeof(Medic.ActualizationPatient);
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // patientCodeDataGridViewTextBoxColumn
+            // 
+            this.patientCodeDataGridViewTextBoxColumn.DataPropertyName = "PatientCode";
+            this.patientCodeDataGridViewTextBoxColumn.HeaderText = "PatientCode";
+            this.patientCodeDataGridViewTextBoxColumn.Name = "patientCodeDataGridViewTextBoxColumn";
+            // 
+            // patientStatusDataGridViewTextBoxColumn
+            // 
+            this.patientStatusDataGridViewTextBoxColumn.DataPropertyName = "PatientStatus";
+            this.patientStatusDataGridViewTextBoxColumn.HeaderText = "PatientStatus";
+            this.patientStatusDataGridViewTextBoxColumn.Name = "patientStatusDataGridViewTextBoxColumn";
             // 
             // Form1
             // 
@@ -238,26 +237,24 @@
             this.Controls.Add(this.bttAdd);
             this.Controls.Add(this.bttSearch);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpCtrls);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.groupBox1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.grpCtrls.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actualizationPatientBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.actualizationPatientBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpCtrls;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource actualizationPatientBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn patientCodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn patientStatusDataGridViewTextBoxColumn;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -271,6 +268,9 @@
         private System.Windows.Forms.Button bttDelete;
         private System.Windows.Forms.Button bttCancel;
         private System.Windows.Forms.Button bttSave;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn patientCodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn patientStatusDataGridViewTextBoxColumn;
     }
 }
 
