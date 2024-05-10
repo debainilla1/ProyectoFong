@@ -74,6 +74,46 @@ namespace Medic
                 actualizationPatientBindingSource.MoveLast();
                 txtPatientCode.Focus();
             }
+
+        private void bttCancel_Click(object sender, EventArgs e)
+        {
+           
+                grpCtrls.Enabled = true;
+                actualizationPatientBindingSource.ResetBindings(false);
+                Form1_Load(sender, e);
+            }
+
+        private void bttEdit_Click(object sender, EventArgs e)
+        {
+           
+                grpCtrls.Enabled = true;
+                txtPatientCode.Focus();
+                ActualizationPatient actualizationPatient = actualizationPatientBindingSource.Current as ActualizationPatient;
+            }
+
+        private void bttDelete_Click(object sender, EventArgs e)
+        {
+          
+                if (MessageBox.Show("Quieres eliminar el registro?", "Eliminar", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    using (DataContext dataContext = new DataContext())
+                    {
+                        ActualizationPatient actualizationPatient = actualizationPatientBindingSource.Current as ActualizationPatient;
+                        if (actualizationPatient != null)
+                        {
+                            if (dataContext.Entry<ActualizationPatient>(actualizationPatient).State == EntityState.Detached)
+                                dataContext.Set<ActualizationPatient>().Attach(actualizationPatient);
+                            dataContext.Entry<ActualizationPatient>(actualizationPatient).State = EntityState.Deleted;
+                            dataContext.SaveChanges();
+                            MessageBox.Show("Registro Eliminado");
+                            actualizationPatientBindingSource.RemoveCurrent();
+                            grpCtrls.Enabled = false;
+                        }
+                    }
+                }
+            }
         }
     }
-    }
+    
+    
+    

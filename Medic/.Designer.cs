@@ -174,6 +174,7 @@
             this.bttEdit.TabIndex = 4;
             this.bttEdit.Text = "Editar";
             this.bttEdit.UseVisualStyleBackColor = true;
+            this.bttEdit.Click += new System.EventHandler(this.bttEdit_Click);
             // 
             // bttDelete
             // 
@@ -183,6 +184,7 @@
             this.bttDelete.TabIndex = 5;
             this.bttDelete.Text = "Eliminar";
             this.bttDelete.UseVisualStyleBackColor = true;
+            this.bttDelete.Click += new System.EventHandler(this.bttDelete_Click);
             // 
             // bttCancel
             // 
@@ -192,6 +194,7 @@
             this.bttCancel.TabIndex = 6;
             this.bttCancel.Text = "Cancelar";
             this.bttCancel.UseVisualStyleBackColor = true;
+            this.bttCancel.Click += new System.EventHandler(this.bttCancel_Click);
             // 
             // bttSave
             // 
