@@ -66,11 +66,19 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="MedicStay.cs" />
+    <Compile Include="Migrations\202405101607574_initial.cs" />
+    <Compile Include="Migrations\202405101607574_initial.Designer.cs">
+      <DependentUpon>202405101607574_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Patient.cs" />
     <Compile Include="PatientCompanion.cs" />
     <Compile Include="PatientStatus.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Migrations\202405101607574_initial.resx">
+      <DependentUpon>202405101607574_initial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
