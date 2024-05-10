@@ -67,6 +67,8 @@
     </Compile>
     <Compile Include="MedicStay.cs" />
     <Compile Include="Patient.cs" />
+    <Compile Include="PatientCompanion.cs" />
+    <Compile Include="PatientStatus.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

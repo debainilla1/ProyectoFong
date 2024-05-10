@@ -23,3 +23,4 @@ namespace Medic
 
         public AssignedMedic() { }
     }
+}
